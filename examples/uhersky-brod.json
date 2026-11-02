@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "project-ub",
+    "title": "Uherský Brod: městská struktura a zeleň",
+    "theme": "landscape",
+    "place": "Uherský Brod, okres Uherské Hradiště, Zlínský kraj",
+    "scope": "Malá textová rešerše proměn opevnění a městské zeleně. Byly čteny institucionální webové záznamy; nebylo provedeno srovnání map, měření terénu ani georeferencování.",
+    "research_questions": [
+      "Jak popisuje NPÚ vztah půdorysu města a historického opevnění?",
+      "Který pozdější zásah do Tyršových sadů dokládá úřední projektový záznam?",
+      "Co je ještě nutné zjistit o vzniku a úpravách jednotlivých parků?"
+    ],
+    "created": "2026-11-02"
+  },
+  "entities": [
+    {
+      "id": "ub-town",
+      "type": "place",
+      "label": "Uherský Brod",
+      "notes": "Dnešní město je výchozí lokalizace. Historické územní hranice nebyly v této ukázce rekonstruovány."
+    },
+    {
+      "id": "ub-walls",
+      "type": "building",
+      "label": "Městské opevnění Uherského Brodu"
+    },
+    {
+      "id": "ub-tyrsovy",
+      "type": "landscape_feature",
+      "label": "Tyršovy sady v Uherském Brodě",
+      "notes": "Název parku musí být ověřen spolu s obcí; jmenovci v jiných městech nejsou stejná entita."
+    },
+    {
+      "id": "ub-north-park",
+      "type": "landscape_feature",
+      "label": "Park v severní části města uváděný NPÚ",
+      "notes": "Přesná hranice a totožnost s konkrétním dnešním parkem se mají ověřit mapou. Není automaticky sloučen s Tyršovými sady."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ub-s-npu",
+      "title": "Uherský Brod – Památkový katalog",
+      "url": "https://www.pamatkovykatalog.cz/uhersky-brod-7665042",
+      "publisher": "Národní památkový ústav",
+      "accessed": "2026-11-02",
+      "kind": "secondary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Historický a urbanistický popis záznamu Uherský Brod, ID v URL 7665042",
+      "notes": "Textová anotace byla otevřena a přečtena. Obrazové přílohy ani mapové vrstvy nebyly posuzovány.",
+      "verification_status": "content_checked"
+    },
+    {
+      "id": "ub-s-city",
+      "title": "Opevnění města – informační a turistický portál Uherského Brodu",
+      "url": "https://www.cojevbrode.cz/kam-v-brode/opevneni-mesta",
+      "publisher": "Městské informační centrum Uherský Brod",
+      "accessed": "2026-11-02",
+      "kind": "secondary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Opevnění města, druhý odstavec a následující věta o dochované bráně",
+      "notes": "",
+      "verification_status": "content_checked"
+    },
+    {
+      "id": "ub-s-project",
+      "title": "Architektonické řešení obnovy parku Tyršovy sady – Uherský Brod",
+      "url": "https://dotaceeu.cz/cs/statistiky-a-analyzy/mapa-projektu/projekty-pred-rokem-2014/12-rop-nuts-ii-stredni-morava/12-2-integrovany-rozvoj-a-obnova-regionu/architektonicke-reseni-obnovy-parku-tyrsovy-sady-u",
+      "publisher": "Ministerstvo pro místní rozvoj ČR – DotaceEU",
+      "accessed": "2026-11-02",
+      "kind": "primary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Projekt CZ.1.12/2.2.00/02.00150, základní údaje a Informace o projektu",
+      "notes": "Úřední projektový záznam dokládá evidované údaje a záměr; sám nepotvrzuje provedení každého jednotlivého zásahu.",
+      "verification_status": "content_checked"
+    }
+  ],
+  "claims": [
+    {
+      "id": "ub-c-terrace",
+      "entity_ids": [
+        "ub-town"
+      ],
+      "text": "NPÚ popisuje založení města na terase pravého břehu Olšavy a přibližně pětiúhelníkový půdorys.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source_id": "ub-s-npu",
+          "locator": "Úvodní odstavec historického popisu: poloha a půdorys města",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "ub-c-ring",
+      "entity_ids": [
+        "ub-town",
+        "ub-walls"
+      ],
+      "text": "Podle NPÚ okružní ulice v městské struktuře sleduje průběh hradeb.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source_id": "ub-s-npu",
+          "locator": "Druhý odstavec historického popisu: uliční síť a okružní ulice",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "ub-c-northpark",
+      "entity_ids": [
+        "ub-walls",
+        "ub-north-park"
+      ],
+      "text": "NPÚ spojuje odstranění hradeb se vznikem parku v severní části města. Přesný rok a hranice parku tento použitý text neurčují.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source_id": "ub-s-npu",
+          "locator": "Odstavec začínající popisem věže farního kostela: asanace hradeb a park",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "ub-c-gates",
+      "entity_ids": [
+        "ub-walls"
+      ],
+      "text": "Městský turistický portál klade zbourání tří bran do roku 1874.",
+      "status": "supported",
+      "evidence": [
+        {
+          "source_id": "ub-s-city",
+          "locator": "Opevnění města, druhý odstavec: zbourání bran",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 1874,
+        "to": 1874,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "ub-c-project",
+      "entity_ids": [
+        "ub-tyrsovy"
+      ],
+      "text": "DotaceEU eviduje obnovu Tyršových sadů pod číslem CZ.1.12/2.2.00/02.00150 s příjemcem Město Uherský Brod a dobou projektu od 16. února do 30. září 2009.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "ub-s-project",
+          "locator": "Základní údaje projektu: registrační číslo, příjemce, zahájení a ukončení",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 2009,
+        "to": 2009,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "ub-c-intent",
+      "entity_ids": [
+        "ub-tyrsovy"
+      ],
+      "text": "Popis projektu počítal s úpravou chodníků s ohledem na kořeny stromů a s doplněním odpočinkových míst. Jde o uvedený záměr, nikoli zde ověřený soupis dokončených prací.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "ub-s-project",
+          "locator": "Informace o projektu, poslední odstavec",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 2009,
+        "to": 2009,
+        "precision": "year"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "ub-e-gates",
+      "type": "demolition",
+      "label": "Zbourání tří bran podle městského přehledu",
+      "entity_ids": [
+        "ub-walls"
+      ],
+      "claim_ids": [
+        "ub-c-gates"
+      ],
+      "time": {
+        "from": 1874,
+        "to": 1874,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "ub-e-renewal",
+      "type": "project",
+      "label": "Evidované období projektu obnovy Tyršových sadů",
+      "entity_ids": [
+        "ub-tyrsovy"
+      ],
+      "claim_ids": [
+        "ub-c-project",
+        "ub-c-intent"
+      ],
+      "time": {
+        "from": 2009,
+        "to": 2009,
+        "precision": "year"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "ub-l-park",
+      "from": "ub-walls",
+      "to": "ub-north-park",
+      "relation": "odstraneni_umoznilo_park_podle_npu",
+      "claim_ids": [
+        "ub-c-northpark"
+      ]
+    }
+  ],
+  "research_log": [
+    {
+      "date": "2026-11-02",
+      "query": "Otevření záznamu Uherský Brod v Památkovém katalogu; kontrola popisu půdorysu a parku",
+      "source_id": "ub-s-npu",
+      "result": "Přečten historický popis; vytvořena tři omezená tvrzení.",
+      "limitations": "Textový webový přístup; žádné nezávislé ověření na historické mapě."
+    },
+    {
+      "date": "2026-11-02",
+      "query": "Opevnění města; identifikace obce a údaje o branách",
+      "source_id": "ub-s-city",
+      "result": "Přečten městský přehled.",
+      "limitations": "Současná popularizační syntéza, nikoli originální demoliční spis."
+    },
+    {
+      "date": "2026-11-02",
+      "query": "DotaceEU: číslo CZ.1.12/2.2.00/02.00150",
+      "source_id": "ub-s-project",
+      "result": "Zkontrolovány základní údaje a deklarovaný účel projektu.",
+      "limitations": "Nebyl otevřen závěrečný protokol ani prováděcí dokumentace."
+    }
+  ],
+  "open_questions": [
+    "Který konkrétní park a rozsah úpravy označuje NPÚ v severní části města? Ověřit na datovaných mapách a v městském archivu.",
+    "Kdy byly založeny jednotlivé části Tyršových sadů? Odlišit zahradu, terénní úpravu a veřejné zpřístupnění; nepřebírat první vyhledaný letopočet.",
+    "Co skutečně realizoval projekt z roku 2009? Dohledat závěrečnou dokumentaci a porovnat snímky před a po zásahu.",
+    "Vyhledat mapy v Archivu ČÚZK, místní roky historického ortofota CENIA a příslušné městské fondy SOkA Uherské Hradiště/MZA; zatím nebyly prohlédnuty."
+  ]
+}

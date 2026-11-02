@@ -1,0 +1,596 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dnesdan/pamet-krajiny/blob/main/skills/pamet-krajiny/schema.json",
+  "title": "Czech research dossier 1.0",
+  "description": "Structural validation. Run badatel.py validate for cross-record references, chronology and geometry checks.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "entities",
+    "sources",
+    "claims",
+    "events",
+    "links",
+    "research_log",
+    "open_questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "theme",
+        "place",
+        "scope",
+        "research_questions",
+        "created"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theme": {
+          "enum": [
+            "landscape",
+            "enterprise"
+          ]
+        },
+        "place": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string"
+        },
+        "research_questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "type": {
+            "enum": [
+              "brand",
+              "building",
+              "craft",
+              "infrastructure",
+              "landscape_feature",
+              "organization",
+              "person",
+              "place",
+              "product"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "from",
+                "to"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "from": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": -9999,
+                  "maximum": 9999
+                },
+                "to": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": -9999,
+                  "maximum": 9999
+                },
+                "source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+                  },
+                  "uniqueItems": true
+                }
+              }
+            }
+          },
+          "sensitive": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "location_accuracy_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "geometry": {
+            "type": "object",
+            "required": [
+              "type",
+              "coordinates"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "Point",
+                  "MultiPoint",
+                  "LineString",
+                  "MultiLineString",
+                  "Polygon",
+                  "MultiPolygon"
+                ]
+              },
+              "coordinates": {
+                "type": "array"
+              }
+            }
+          },
+          "geometry_role": {
+            "enum": [
+              "site",
+              "centroid",
+              "approximate",
+              "extent",
+              "unknown"
+            ],
+            "description": "Meaning of geometry; absent means unknown, never exact site by default."
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "url",
+          "publisher",
+          "accessed",
+          "kind",
+          "access",
+          "license"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "accessed": {
+            "type": "string",
+            "format": "date"
+          },
+          "kind": {
+            "enum": [
+              "primary",
+              "secondary",
+              "synthetic"
+            ]
+          },
+          "access": {
+            "enum": [
+              "open",
+              "metadata",
+              "restricted",
+              "onsite"
+            ]
+          },
+          "license": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sensitive": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "verification_status": {
+            "enum": [
+              "content_checked",
+              "search_index_only",
+              "unavailable"
+            ],
+            "description": "Explicit source-content verification. Index-only or unavailable evidence alone cannot make a claim documented/supported; legacy absence remains accepted."
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "entity_ids",
+          "text",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "entity_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "disputed",
+              "documented",
+              "hypothesis",
+              "supported"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_id",
+                "locator",
+                "kind"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "enum": [
+                    "observation",
+                    "transcription",
+                    "paraphrase",
+                    "context"
+                  ]
+                },
+                "excerpt": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "time": {
+            "type": "object",
+            "required": [
+              "from",
+              "to",
+              "precision"
+            ],
+            "properties": {
+              "from": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "to": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "precision": {
+                "enum": [
+                  "approximate",
+                  "exact",
+                  "range",
+                  "unknown",
+                  "year"
+                ]
+              }
+            }
+          },
+          "sensitive": {
+            "type": "boolean"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "documented",
+                    "supported",
+                    "disputed"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "evidence": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "label",
+          "entity_ids",
+          "claim_ids",
+          "time"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "time": {
+            "type": "object",
+            "required": [
+              "from",
+              "to",
+              "precision"
+            ],
+            "properties": {
+              "from": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "to": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "precision": {
+                "enum": [
+                  "approximate",
+                  "exact",
+                  "range",
+                  "unknown",
+                  "year"
+                ]
+              }
+            }
+          },
+          "sensitive": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from",
+          "to",
+          "relation",
+          "claim_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "from": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "relation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "time": {
+            "type": "object",
+            "required": [
+              "from",
+              "to",
+              "precision"
+            ],
+            "properties": {
+              "from": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "to": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": -9999,
+                "maximum": 9999
+              },
+              "precision": {
+                "enum": [
+                  "approximate",
+                  "exact",
+                  "range",
+                  "unknown",
+                  "year"
+                ]
+              }
+            }
+          },
+          "sensitive": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "research_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "query",
+          "source_id",
+          "result",
+          "limitations"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "query": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "result": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitations": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

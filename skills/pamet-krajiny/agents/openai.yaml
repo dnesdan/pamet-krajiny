@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paměť krajiny"
+  short_description: "Proměny české krajiny doložené prameny"
+  default_prompt: "Použij $pamet-krajiny k výzkumu proměn zvoleného místa v ČR."

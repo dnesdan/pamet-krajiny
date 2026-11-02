@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "project-rozmberk-01",
+    "title": "Rožmberk: voda, hráze a mokřady — počáteční rešerše",
+    "theme": "landscape",
+    "place": "Rybník Rožmberk a navazující vodní soustava u Třeboně, Jihočeský kraj",
+    "scope": "Čtyři tvrzení o mokřadech a změnách vodní soustavy v období 1994–2010. Území je vymezeno slovně: Rožmberk, jeho výtopa a návaznost na Novořecké splavy a hráz Nové řeky. Dva podklady jsou primární institucionální záznamy: povodňová zpráva Povodí Vltavy a registr AOPK. Třetím je odborný přehled v časopise AOPK; tvrzení o opravách proto mají stav supported. Nebyla provedena analýza map, měření ploch ani georeference. Historie vzniku rybníka a varianty historických názvů zůstávají dalšími badatelskými otázkami.",
+    "research_questions": [
+      "Jak úřední evidence vymezuje mokřadní hodnoty Výtopa Rožmberka a počátek její ochrany?",
+      "Jak povodeň v srpnu 2002 změnila přítok vody do Rožmberka?",
+      "Které následné úpravy hrází a rozdělování průtoků lze v dostupných textech doložit a co ještě vyžaduje původní stavební dokumentaci?"
+    ],
+    "created": "2026-11-02"
+  },
+  "entities": [
+    {
+      "id": "place-trebon",
+      "type": "place",
+      "label": "Třeboň a okolní vodní krajina",
+      "notes": "Výzkumné okolí, nikoli geometrie obce nebo katastru. Souřadnice nebyly převzaty ani odhadnuty."
+    },
+    {
+      "id": "water-rozmberk",
+      "type": "landscape_feature",
+      "label": "Rybník Rožmberk",
+      "notes": "Samostatný rybník; nezaměňovat s přírodní rezervací ani s celou Rožmberskou rybniční soustavou."
+    },
+    {
+      "id": "reserve-vytopa",
+      "type": "landscape_feature",
+      "label": "Přírodní rezervace Výtopa Rožmberka",
+      "notes": "AOPK uvádí ID registru ÚSOP 1725. Hranice rezervace nebyly geometricky načteny."
+    },
+    {
+      "id": "dam-novorecka",
+      "type": "infrastructure",
+      "label": "Novořecká hráz",
+      "notes": "Km 3,450 v tvrzení claim-flood odkazuje na staničení v povodňové zprávě, ne na zde ověřený současný mapový bod."
+    },
+    {
+      "id": "weir-rozvodi",
+      "type": "infrastructure",
+      "label": "Novořecké splavy (Rozvodí)",
+      "notes": "Oba názvy jsou doloženy společně v nadpisu/popisu moderního odborného článku z roku 2013; další historická jména nebyla ověřena."
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-flood-2003",
+      "title": "Souhrnná zpráva o povodni v srpnu 2002 za Povodí Vltavy, státní podnik",
+      "url": "https://www.dibavod.cz/data/povodnove_zpravy/vltava/vltava_08_2002.pdf",
+      "publisher": "Povodí Vltavy, státní podnik; digitální kopie DIBAVOD (VÚV T. G. Masaryka)",
+      "accessed": "2026-11-02",
+      "kind": "primary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Březen 2003; kap. 2.1 Závod Horní Vltava, pododdíl Novořecké splavy a rybník Rožmberk.",
+      "notes": "Původní institucionální vyhodnocení zpracované vodohospodářským dispečinkem z podkladů Povodí Vltavy a dalších institucí. Přečten titulní údaj a vybraný textový oddíl; nebylo přečteno všech 95 stran ani přezkoumán hydrologický model. Číselné údaje z grafu o retenčním objemu nebyly přijaty jako samostatné tvrzení.",
+      "verification_status": "content_checked"
+    },
+    {
+      "id": "source-aopk-register",
+      "title": "Výtopa Rožmberka — ISOP Portál, záznam přírodní rezervace",
+      "url": "https://portal.nature.cz/cs/web/cz/w/uzemi-1587",
+      "publisher": "Agentura ochrany přírody a krajiny ČR",
+      "accessed": "2026-11-02",
+      "kind": "primary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Záhlaví záznamu, Datum prvního vyhlášení a oddíl Co tu chráníme; Digitální registr ÚSOP 1725.",
+      "notes": "Primární úřední evidenční záznam pro evidované datum a předmět ochrany. Datum aktualizace vlastního popisu není uvedeno. Vyhlašovací předpis ani plán péče nebyl otevřen; datum přístupu proto není datem průzkumu biotopů.",
+      "verification_status": "content_checked"
+    },
+    {
+      "id": "source-aopk-article",
+      "title": "Miroslav Hátle: Ochrana přírody a vodohospodářské stavby v CHKO Třeboňsko",
+      "url": "https://www.casopis.ochranaprirody.cz/pece-o-prirodu-a-krajinu/ochrana-prirody-a-vodohospodarske-stavby/",
+      "publisher": "Ochrana přírody / Agentura ochrany přírody a krajiny ČR",
+      "accessed": "2026-11-02",
+      "kind": "secondary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Ochrana přírody 4/2013, webové vydání 24. 10. 2013; oddíly Rekonstrukce hráze Nové řeky a Novořeckých splavů a Rybník Rožmberk – klíčový prvek soustavy.",
+      "notes": "Odborný přehled od pracovníka Správy CHKO Třeboňsko, nikoli původní stavební dokumentace. Klasifikován konzervativně jako secondary. U popisu povodně článek odkazuje na stejnou zprávu Povodí Vltavy 2003; není to nezávislé potvrzení této události. Dva podklady AOPK nejsou dvě nezávislé instituce.",
+      "verification_status": "content_checked"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-protection",
+      "entity_ids": [
+        "reserve-vytopa",
+        "water-rozmberk"
+      ],
+      "text": "Registr AOPK uvádí první vyhlášení přírodní rezervace Výtopa Rožmberka dne 29. 11. 1994 a eviduje zde ochranu pobřežních porostů rybníka a navazujících mokrých luk. Rok vyhlášení nedatuje vznik těchto mokřadů.",
+      "status": "documented",
+      "time": {
+        "from": 1994,
+        "to": 1994,
+        "precision": "year"
+      },
+      "evidence": [
+        {
+          "source_id": "source-aopk-register",
+          "locator": "Záhlaví: Datum prvního vyhlášení 29.11.1994; oddíl Co tu chráníme / Popis předmětu ochrany.",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "claim-flood",
+      "entity_ids": [
+        "water-rozmberk",
+        "dam-novorecka"
+      ],
+      "text": "Podle povodňové zprávy se 13. 8. 2002 odpoledne protrhla Novořecká hráz v tehdy uvedeném staničení ř. km 3,450. Průrvou začala nekontrolovatelně přitékat voda z povodí horní Lužnice do Rožmberka.",
+      "status": "documented",
+      "time": {
+        "from": 2002,
+        "to": 2002,
+        "precision": "year"
+      },
+      "evidence": [
+        {
+          "source_id": "source-flood-2003",
+          "locator": "Kap. 2.1, pododdíl Novořecké splavy a rybník Rožmberk, poslední odstavec před pokračováním bilančního odhadu přítoku; začátek S ohledem na rostoucí průtoky.",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "claim-repairs",
+      "entity_ids": [
+        "water-rozmberk"
+      ],
+      "text": "Odborný přehled AOPK datuje opravy hráze a zařízení Rožmberka do let 2003–2006. Popisuje mimo jiné opravu bezpečnostního přelivu u Smitky, výpustí a zvýšení kamenného opevnění návodní strany hráze. Původní dokumentace provedených oprav zatím nebyla ověřena.",
+      "status": "supported",
+      "time": {
+        "from": 2003,
+        "to": 2006,
+        "precision": "range"
+      },
+      "evidence": [
+        {
+          "source_id": "source-aopk-article",
+          "locator": "Oddíl Rybník Rožmberk – klíčový prvek soustavy, první dva odstavce (opravy 2003–2006).",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "claim-weirs",
+      "entity_ids": [
+        "weir-rozvodi",
+        "water-rozmberk"
+      ],
+      "text": "Tentýž přehled uvádí, že při rekonstrukci Novořeckých splavů v letech 2008–2010 nahradily původní dvě jezová pole tři regulovatelné klapkové jezy. Popsaným účelem bylo lepší dělení průtoků do Staré a Nové řeky a využití Rožmberka a mokřadů při povodních; skutečný účinek zde nebyl samostatně vypočten.",
+      "status": "supported",
+      "time": {
+        "from": 2008,
+        "to": 2010,
+        "precision": "range"
+      },
+      "evidence": [
+        {
+          "source_id": "source-aopk-article",
+          "locator": "Oddíl Rekonstrukce hráze Nové řeky a Novořeckých splavů, odstavec začínající V letech 2008–2010 a bezprostředně navazující odstavec.",
+          "kind": "paraphrase"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "event-protection",
+      "type": "protection",
+      "label": "První vyhlášení přírodní rezervace podle registru AOPK",
+      "entity_ids": [
+        "reserve-vytopa"
+      ],
+      "claim_ids": [
+        "claim-protection"
+      ],
+      "time": {
+        "from": 1994,
+        "to": 1994,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "event-flood",
+      "type": "flood",
+      "label": "Průrva Novořecké hráze a nekontrolovaný přítok do Rožmberka",
+      "entity_ids": [
+        "water-rozmberk",
+        "dam-novorecka"
+      ],
+      "claim_ids": [
+        "claim-flood"
+      ],
+      "time": {
+        "from": 2002,
+        "to": 2002,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "event-repairs",
+      "type": "repair",
+      "label": "Opravy hráze a zařízení Rožmberka podle odborného přehledu",
+      "entity_ids": [
+        "water-rozmberk"
+      ],
+      "claim_ids": [
+        "claim-repairs"
+      ],
+      "time": {
+        "from": 2003,
+        "to": 2006,
+        "precision": "range"
+      }
+    },
+    {
+      "id": "event-weirs",
+      "type": "reconstruction",
+      "label": "Modernizace dělicích jezů podle odborného přehledu",
+      "entity_ids": [
+        "weir-rozvodi"
+      ],
+      "claim_ids": [
+        "claim-weirs"
+      ],
+      "time": {
+        "from": 2008,
+        "to": 2010,
+        "precision": "range"
+      }
+    }
+  ],
+  "links": [],
+  "research_log": [
+    {
+      "date": "2026-11-02",
+      "source_id": "source-flood-2003",
+      "query": "Webové hledání: site.chmi.cz povodeň 2002 Rožmberk 70 milionů; následně otevření nalezeného PDF Povodí Vltavy na DIBAVOD.",
+      "result": "Otevřeny titulní údaje (březen 2003) a text pododdílu Novořecké splavy a rybník Rožmberk. Přijato jedno tvrzení o průrvě a směru přítoku. Prohledán text výrazem Rožmberk; vyžádán také screenshot PDF strany 15, bez využití jako důkazu dalšího tvrzení.",
+      "limitations": "Hledání řetězců Novořeck a česl nástrojem find hlásilo bez shody, ačkoli relevantní slova jsou v otevřeném oddílu. Jde o omezení vyhledávání, nikoli absenci událostí. Nebyla přečtena celá zpráva ani analyzovány grafy."
+    },
+    {
+      "date": "2026-11-02",
+      "source_id": "source-aopk-register",
+      "query": "Webové hledání: site.nature.cz Rožmberk plán péče rybník hydrologie; otevření konkrétního záznamu Výtopa Rožmberka.",
+      "result": "Přečteny evidenční údaje a předmět ochrany. Použito datum prvního vyhlášení a popis chráněných pobřežních porostů a mokrých luk.",
+      "limitations": "Vyhledávací úryvek obsahoval i sedimentační popis, který v otevřeném textu záznamu nebyl. Tento úryvek nebyl přijat jako důkaz sedimentace. Mapový prohlížeč, fotografie a plán péče nebyly otevřeny."
+    },
+    {
+      "date": "2026-11-02",
+      "source_id": "source-aopk-article",
+      "query": "Z úvodního institucionálního vyhledávání otevřen článek Ochrana přírody a vodohospodářské stavby; přečteny konkrétní oddíly o rekonstrukcích a Rožmberku, datum a údaj o autorově pracovišti.",
+      "result": "Přijata dvě tvrzení se stavem supported: opravy Rožmberka 2003–2006 a modernizace Novořeckých splavů 2008–2010. Rozlišeno již provedené dílo od záměru popisovaného v témže článku.",
+      "limitations": "Neověřeny stavební spisy, předávací protokoly ani realizace pozdějšího záměru Protipovodňová opatření Rožmberk. Fotografie nebyly vizuálně interpretovány. Historické a převzaté hydrologické pasáže nejsou nezávislé primární důkazy."
+    },
+    {
+      "date": "2026-11-02",
+      "source_id": "source-aopk-article",
+      "query": "Kontrola alternativ před přijetím dostupného článku AOPK: https://www.pvl.cz/podpora-prevence-pred-povodnemi-ii/prehled-staveb-protipovodnovych-opatreni/2--rekonstrukce-novorecke-hraze-km-3-520--6-250 ; dále dotaz site.pamatkovykatalog.cz Rožmberk rybník Nová řeka a otevření https://pamatkovykatalog.cz/rybnik-rozmberk-16281128 .",
+      "result": "Stránka Povodí Vltavy se neotevřela (502 Bad Gateway); záznam NPÚ se neotevřel (503 Service Unavailable). Další požadavky na tyto zdroje nebyly provedeny. Jejich úryvky nebyly přijaty jako důkaz. Tento záznam je připojen ke skutečně použitému náhradnímu článku AOPK, nikoli k neotevřeným kandidátům.",
+      "limitations": "Překážka dostupnosti neznamená, že dokumenty neexistují. Starší datace stavby rybníka z vyhledávacího úryvku nebyla převzata do tvrzení."
+    }
+  ],
+  "open_questions": [
+    "1. Jak se měnila hranice vodní plochy a mokrých luk? V Archivu ČÚZK nejprve ověřit příslušná katastrální území okolí Rožmberka a Staré Hlíny, dohledat konkrétní listy stabilního katastru a zapsat zaměření, vydání, měřítko a legendu. Srovnat stejný výřez s ortofotem s doloženým místním rokem snímkování; nepřítomnost prvku sama nebude důkazem jeho zániku.",
+    "2. Které části starších vodních staveb vznikly a měnily se v doložených letech? V Digitálním archivu SOA v Třeboni prověřit uložení a inventáře materiálů původce velkostatku Třeboň, hledat výrazy Rožmberk, Nová řeka, rybniční mapy a stavební účty. Teprve z konkrétního záznamu převzít signaturu a dobové názvy; dosud žádná signatura ani mapový list ověřeny nejsou.",
+    "3. Lze opravy 2003–2006 a modernizaci 2008–2010 potvrdit původními dokumenty? Vyhledat dokumentaci skutečného provedení, závěrečnou zprávu investora nebo předávací/kolaudační doklad u vlastníka a správce díla či v příslušných vodoprávních spisech. Ověřit data dokončení a oddělit provedené úpravy od pozdějších plánů; žádný dotaz nebyl nikomu odeslán."
+  ],
+  "workflow_log": [
+    {
+      "date": "2026-11-02",
+      "action": "Přečten SKILL.md a reference data-a-vystupy.md, metodika.md a archivy-a-zdroje.md; prohlédnuto schéma a relevantní části CLI.",
+      "result": "Místo identifikováno ze zadání. Výzkumná data uložena mimo repozitář skillu."
+    },
+    {
+      "date": "2026-11-02",
+      "action": "Přečteny instrukce cloud-environment-runtime a síťová reference; zkontrolována dostupnost environment_status a souboru /etc/codex/network-policy.json.",
+      "result": "Nástroj environment_status nebyl dostupný a soubor nebyl nalezen. Nebyl použit přímý síťový klient v shellu; veřejné podklady byly otevřeny webovým nástrojem."
+    },
+    {
+      "date": "2026-11-02",
+      "action": "badatel.py --help; badatel.py init --title Rožmberk: voda, hráze a mokřady — počáteční rešerše --theme landscape --place Rybník Rožmberk a navazující vodní soustava u Třeboně, Jihočeský kraj --out research/forward_landscape/rozmberk.json",
+      "result": "CLI úspěšně vytvořilo prázdný dossier. Počáteční verze byla před doplněním zkopírována do /tmp/forward_landscape_rozmberk_initial.json."
+    },
+    {
+      "date": "2026-11-02",
+      "action": "Ruční doplnění dossieru z otevřených institucionálních podkladů.",
+      "result": "Čtyři tvrzení, tři použité zdroje (dva primary, jeden secondary), tři konkrétní další kroky. Bez geometrií, převzatých fotografií, soukromých údajů a publikování."
+    },
+    {
+      "date": "2026-11-02",
+      "action": "CLI validate a render: výstup Markdown a HTML bez přepínače --public.",
+      "result": "validate: OK (4 claims, 3 sources); oba exporty skončily kódem 0. Žádná publikace ani síťový zápis.",
+      "commands": [
+        {
+          "command": [
+            "python3",
+            "/workspace/scratch/3a072cd83679/pamet-krajiny/skills/pamet-krajiny/scripts/badatel.py",
+            "render",
+            "/workspace/scratch/3a072cd83679/research/forward_landscape/rozmberk.json",
+            "--format",
+            "markdown",
+            "--out",
+            "/workspace/scratch/3a072cd83679/research/forward_landscape/rozmberk.md"
+          ],
+          "returncode": 0
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/scratch/3a072cd83679/pamet-krajiny/skills/pamet-krajiny/scripts/badatel.py",
+            "render",
+            "/workspace/scratch/3a072cd83679/research/forward_landscape/rozmberk.json",
+            "--format",
+            "html",
+            "--out",
+            "/workspace/scratch/3a072cd83679/research/forward_landscape/rozmberk.html"
+          ],
+          "returncode": 0
+        }
+      ]
+    }
+  ]
+}

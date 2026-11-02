@@ -1,0 +1,48 @@
+{
+  "request_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer/11/query?where=nazev%3D%27Uhersk%C3%BD+Brod%27+AND+obec%3D592731&outFields=kod%2Cnazev%2Cobec&returnGeometry=true&outSR=5514&f=json",
+  "retrieved_at": "2026-11-02T09:58:20+00:00",
+  "data": {
+    "displayFieldName": "nazev",
+    "fieldAliases": {
+      "kod": "Kód části obce",
+      "nazev": "Název části obce",
+      "obec": "Nadřazená obec"
+    },
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+      "wkid": 102067,
+      "latestWkid": 5514
+    },
+    "fields": [
+      {
+        "name": "kod",
+        "type": "esriFieldTypeInteger",
+        "alias": "Kód části obce"
+      },
+      {
+        "name": "nazev",
+        "type": "esriFieldTypeString",
+        "alias": "Název části obce",
+        "length": 48
+      },
+      {
+        "name": "obec",
+        "type": "esriFieldTypeInteger",
+        "alias": "Nadřazená obec"
+      }
+    ],
+    "features": [
+      {
+        "attributes": {
+          "kod": 412643,
+          "nazev": "Uherský Brod",
+          "obec": 592731
+        },
+        "geometry": {
+          "x": -524589,
+          "y": -1187195
+        }
+      }
+    ]
+  }
+}

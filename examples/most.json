@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "project-most",
+    "title": "Most: od lomu k jezeru a rozpor v údaji o rozloze",
+    "theme": "landscape",
+    "place": "Most, Ústecký kraj",
+    "scope": "Malý výzkum založený na dvou webových záznamech jednoho institucionálního poskytovatele. Dokládá publikované údaje o ukončení těžby a napouštění; neobsahuje rekonstrukci celého starého Mostu ani mapové měření.",
+    "research_questions": [
+      "Jaké milníky proměny lomu na jezero uvádí provozovatel rekultivace?",
+      "Shodují se dva zveřejněné údaje o rozloze?",
+      "Co je třeba ověřit před zakreslením historických hranic?"
+    ],
+    "created": "2026-11-02"
+  },
+  "entities": [
+    {
+      "id": "most-pit",
+      "type": "landscape_feature",
+      "label": "Lom Most–Ležáky",
+      "notes": "Rozsah a označení jednotlivých historických důlních provozů se měnily; tato ukázka je neslučuje do univerzální geometrie."
+    },
+    {
+      "id": "most-lake",
+      "type": "landscape_feature",
+      "label": "Jezero Most",
+      "notes": "Geometrie nebyla v tomto průzkumu zaměřena ani převzata z ověřeného vektorového zdroje."
+    }
+  ],
+  "sources": [
+    {
+      "id": "most-s-history",
+      "title": "Historie lomu Most",
+      "url": "https://www.diamo.cz/cs/milada-most",
+      "publisher": "DIAMO, státní podnik",
+      "accessed": "2026-11-02",
+      "kind": "primary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Sekce Historie lomu Most",
+      "notes": "Institucionální přehled správce rekultivace; u předchozích dějin jde o retrospektivní popis. Zde se používá především pro údaje o rekultivačních milnících.",
+      "verification_status": "content_checked"
+    },
+    {
+      "id": "most-s-lake",
+      "title": "Jezero Most – základní informace",
+      "url": "https://www.diamo.cz/cs/milada-most/jezero/most",
+      "publisher": "DIAMO, státní podnik",
+      "accessed": "2026-11-02",
+      "kind": "primary",
+      "access": "open",
+      "license": "unknown",
+      "locator": "Základní informace a tabulka parametrů jezera",
+      "notes": "Druhý záznam téhož poskytovatele; nejde o nezávislé potvrzení prvního zdroje.",
+      "verification_status": "content_checked"
+    }
+  ],
+  "claims": [
+    {
+      "id": "most-c-end",
+      "entity_ids": [
+        "most-pit"
+      ],
+      "text": "DIAMO uvádí ukončení těžby uhlí na lokalitě k 31. srpnu 1999.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "most-s-history",
+          "locator": "Historie lomu Most, odstavec začínající útlumem od roku 1995",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 1999,
+        "to": 1999,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "most-c-change",
+      "entity_ids": [
+        "most-pit",
+        "most-lake"
+      ],
+      "text": "Jezero vzniklo zatopením zbytkové jámy lomu Most–Ležáky v rámci hydrické rekultivace.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "most-s-history",
+          "locator": "Historie lomu Most, odstavec o zahlazování následků těžby od roku 2004",
+          "kind": "paraphrase"
+        }
+      ]
+    },
+    {
+      "id": "most-c-start",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "text": "Přehled DIAMO datuje slavnostní zahájení napouštění na 24. října 2008.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "most-s-history",
+          "locator": "Historie lomu Most, odstavec o zahájení napouštění",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 2008,
+        "to": 2008,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "most-c-level",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "text": "Dopouštění na konečnou provozní hladinu 199 m n. m. bylo podle DIAMO dokončeno v září 2014.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "most-s-history",
+          "locator": "Historie lomu Most, odstavec o dopouštění v roce 2014",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 2014,
+        "to": 2014,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "most-c-pause",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "text": "Samostatná karta jezera uvádí napouštění od října 2008 do září 2014 s přerušením v letech 2012 a 2013.",
+      "status": "documented",
+      "evidence": [
+        {
+          "source_id": "most-s-lake",
+          "locator": "Tabulka, položka Doba napouštění",
+          "kind": "paraphrase"
+        }
+      ],
+      "time": {
+        "from": 2008,
+        "to": 2014,
+        "precision": "range"
+      }
+    },
+    {
+      "id": "most-c-area",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "text": "Dva přehledy DIAMO se v rozloze liší: karta jezera uvádí 309,09 ha, historický přehled 309,4 ha. Příčinu rozdílu použité texty neobjasňují; jediná přesná hodnota zde není vybrána.",
+      "status": "disputed",
+      "evidence": [
+        {
+          "source_id": "most-s-lake",
+          "locator": "Tabulka, položka Zatopená plocha",
+          "kind": "paraphrase"
+        },
+        {
+          "source_id": "most-s-history",
+          "locator": "Historie lomu Most, odstavec parametrů vodního díla při provozní hladině",
+          "kind": "paraphrase"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "most-e-end",
+      "type": "extraction_end",
+      "label": "Ukončení těžby uhlí podle DIAMO",
+      "entity_ids": [
+        "most-pit"
+      ],
+      "claim_ids": [
+        "most-c-end"
+      ],
+      "time": {
+        "from": 1999,
+        "to": 1999,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "most-e-start",
+      "type": "filling_start",
+      "label": "Zahájení napouštění jezera",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "claim_ids": [
+        "most-c-start"
+      ],
+      "time": {
+        "from": 2008,
+        "to": 2008,
+        "precision": "year"
+      }
+    },
+    {
+      "id": "most-e-level",
+      "type": "filling_completion",
+      "label": "Dosažení konečné provozní hladiny",
+      "entity_ids": [
+        "most-lake"
+      ],
+      "claim_ids": [
+        "most-c-level"
+      ],
+      "time": {
+        "from": 2014,
+        "to": 2014,
+        "precision": "year"
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "most-l-reclamation",
+      "from": "most-pit",
+      "to": "most-lake",
+      "relation": "zbytkova_jama_zatopena_pri_rekultivaci",
+      "claim_ids": [
+        "most-c-change"
+      ]
+    }
+  ],
+  "research_log": [
+    {
+      "date": "2026-11-02",
+      "query": "DIAMO: Historie lomu Most; odlišit od Historie lomu Chabařovice na téže stránce",
+      "source_id": "most-s-history",
+      "result": "Ověřena správná sekce a citované milníky.",
+      "limitations": "Žádné mapové měření; údaje o jiném jezeru Milada nebyly přeneseny na Most."
+    },
+    {
+      "date": "2026-11-02",
+      "query": "DIAMO: Jezero Most, srovnání základních parametrů",
+      "source_id": "most-s-lake",
+      "result": "Zjištěn rozdíl v ploše vůči druhému záznamu; zachovány obě citace.",
+      "limitations": "Obě stránky mají stejného poskytovatele; neznáme datum měření a přesnou metodiku výměry."
+    }
+  ],
+  "open_questions": [
+    "Čím se vysvětluje rozdíl 309,09 a 309,4 ha? Dohledat aktuální technickou dokumentaci, datum a definici plochy, případně vznést dotaz správci se souhlasem uživatele.",
+    "Jak se měnila přesná geometrie lomu, výsypek a zástavby? Vyhledat datované báňské mapy, snímky a příslušné fondy SOA Litoměřice/SOkA Most.",
+    "Jaké bylo místní datum snímku každého použitého historického ortofota? Před srovnáním zkontrolovat vrstvu roků snímkování.",
+    "Pro navazující vycházku ověřit aktuální veřejnou trasu a přístupnost; historické báňské mapy nejsou podkladem pro bezpečný vstup."
+  ]
+}

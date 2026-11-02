@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.cache/
+.DS_Store
+# Vlastní bádání drž mimo veřejný balík. Příklady v examples/ jsou veřejné.
+work/
+data/
+downloads/
+private/
+*.env
+.env

@@ -1,0 +1,206 @@
+{
+  "checked_at": "2026-11-02",
+  "repository": "sarsonj/rodokmen-skill",
+  "pull_requests": [
+    {
+      "number": 62,
+      "title": "portaly.md: písemnosti vrchnosti, zemské desky a vodnimlyny.cz",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/62",
+      "state": "open",
+      "head_sha": "6470aabf297f558ca7c69d2c7bc8a65993e9df65",
+      "merged_at": null
+    },
+    {
+      "number": 60,
+      "title": "Sdílená cache snímků: stejný snímek se z archivu stahuje jen jednou",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/60",
+      "state": "open",
+      "head_sha": "b49b732bb9a18c9fbc5c2de57ac356b12e8277f2",
+      "merged_at": null
+    },
+    {
+      "number": 59,
+      "title": "Fix: YAML sekce SKILL.md nyní plně parsovatelná dle standardu YAML",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/59",
+      "state": "open",
+      "head_sha": "a76d85d700a3a4b6b5a35e99f8f028ba0a58411a",
+      "merged_at": null
+    },
+    {
+      "number": 56,
+      "title": "nginx: map_hash_bucket_size 128 pro přihlašovací SHA-256 hash (fix 502 v Dockeru/CapRoveru)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/56",
+      "state": "open",
+      "head_sha": "12bb588ed675f8be874cd672d16093251771d15b",
+      "merged_at": null
+    },
+    {
+      "number": 55,
+      "title": "Vějíř: plynulý posun a přibližování (hardwarová akcelerace, automaticky u velkých vějířů)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/55",
+      "state": "open",
+      "head_sha": "0291562c9ef208dde5af5532c69581c3b28c3744",
+      "merged_at": null
+    },
+    {
+      "number": 53,
+      "title": "Brzda 0.6.0 na Windows: opravy tools/slusne.py, doplňky a regresní testy",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/53",
+      "state": "open",
+      "head_sha": "41c9333466c5a25b0e74cbf367a6b21434aa46c8",
+      "merged_at": null
+    },
+    {
+      "number": 52,
+      "title": "Cursor: kompatibilita, AGENTS.md v šabloně a oprava Node ≥ 22.12",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/52",
+      "state": "open",
+      "head_sha": "f748c0e3a9219e9af20bf17413ca0a17de88fa84",
+      "merged_at": null
+    },
+    {
+      "number": 49,
+      "title": "Support multiple family stories",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/49",
+      "state": "open",
+      "head_sha": "0ddd863f33a2fcb2b4dd461faa2d662404efd572",
+      "merged_at": null
+    },
+    {
+      "number": 48,
+      "title": "Fix Třeboň image tile stitching",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/48",
+      "state": "open",
+      "head_sha": "b877a586f249b6aee495aaa22f05b2e2857df7a1",
+      "merged_at": null
+    },
+    {
+      "number": 47,
+      "title": "Zpřesnit pokyny pro archivy a hlásit opakované pokusy eBadatelny",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/47",
+      "state": "open",
+      "head_sha": "82223f291b63a9381196028d1200295520e9a5b9",
+      "merged_at": null
+    },
+    {
+      "number": 46,
+      "title": "Zpřesnit předávání výzkumu a práci s GEDCOM",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/46",
+      "state": "open",
+      "head_sha": "f119395502ce645113b6aa1fe5d8fcb69a414d9d",
+      "merged_at": null
+    },
+    {
+      "number": 42,
+      "title": "Podpora Codexu a OMP",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/42",
+      "state": "open",
+      "head_sha": "010f94a7e00f5d511cd70e473b9dafa4efe5ae91",
+      "merged_at": null
+    },
+    {
+      "number": 41,
+      "title": "Vylepšení z praxe: čas aktualizace na webu, Node 22.12, web ve vnitřn…",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/41",
+      "state": "open",
+      "head_sha": "e4ccaf08e1ac5363bf0311783d598f554b35403e",
+      "merged_at": null
+    },
+    {
+      "number": 29,
+      "title": "Verze 0.8.0: nové archivy (Brno, Litoměřice, židovské matriky), vězni a oběti 2. světové války, smoke test",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/29",
+      "state": "open",
+      "head_sha": "00ced9b1a33c532c87b83ee3b38ce58431948e4c",
+      "merged_at": null
+    },
+    {
+      "number": 28,
+      "title": "Tři doplňující skilly: vedení čtenářů, vedlejší nálezy, evangelické a moravské matriky",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/28",
+      "state": "open",
+      "head_sha": "aa8cfdf92e63f39b49e06946e49f4e1dcadb8d7d",
+      "merged_at": null
+    },
+    {
+      "number": 26,
+      "title": "SKILL.md: popis v uvozovkách, aby se skill načetl i v GitHub Copilot",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/26",
+      "state": "open",
+      "head_sha": "83e82dbd9d5f11d15feabefeb6e2a1211270c606",
+      "merged_at": null
+    },
+    {
+      "number": 23,
+      "title": "Významné osobnosti rodokmenu",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/23",
+      "state": "open",
+      "head_sha": "afd4d2041da5498735df641107f31a62a094256b",
+      "merged_at": null
+    },
+    {
+      "number": 22,
+      "title": "ARON: odkaz na snímek otevře správný snímek, ne první (#18)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/22",
+      "state": "open",
+      "head_sha": "ee0a24059fc40453d99fb6ddbb54791a904a7271",
+      "merged_at": null
+    },
+    {
+      "number": 20,
+      "title": "Návrh: stránka „Strom předků“ vedle vějíře",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/20",
+      "state": "open",
+      "head_sha": "7a950b885c83aa6a57a56c9bd82f65bf64fc81b2",
+      "merged_at": null
+    },
+    {
+      "number": 19,
+      "title": "Stránky Statistiky a Domy, volitelné původní tvary jmen",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/19",
+      "state": "open",
+      "head_sha": "4f83225d0b0e3ce0047523a7a028fe1ba657b732",
+      "merged_at": null
+    },
+    {
+      "number": 13,
+      "title": "Stromový graf celé rodiny s rozbalováním větví a sourozenci",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/13",
+      "state": "open",
+      "head_sha": "c1fd6d6315952ee3119d9ac4e23b7e857b810ab9",
+      "merged_at": null
+    },
+    {
+      "number": 10,
+      "title": "Aktualizace projektu: přepsat změněné šablony webu se zálohou (fix #9)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/10",
+      "state": "merged",
+      "head_sha": "5e2f380055b089d57186a8d8bb067cbd8b990b37",
+      "merged_at": "2026-10-21T20:11:33Z"
+    },
+    {
+      "number": 8,
+      "title": "Porta fontium: správný odkaz ke snímku, kontrola výřezu, ohled na server (fix #5)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/8",
+      "state": "merged",
+      "head_sha": "47194efb188858052a4eb42ebb81a1ccf4c6ffbc",
+      "merged_at": "2026-10-21T20:11:27Z"
+    },
+    {
+      "number": 7,
+      "title": "ftb_export: žádné odkazy na smazané osoby (fix #4)",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/7",
+      "state": "merged",
+      "head_sha": "46322e38650cec733b6401cc129e8468909ef863",
+      "merged_at": "2026-10-21T20:11:22Z"
+    },
+    {
+      "number": 2,
+      "title": "Windows, nástroje pro SOA Plzeň a SOA Praha, záloha z MyHeritage",
+      "url": "https://github.com/sarsonj/rodokmen-skill/pull/2",
+      "state": "merged",
+      "head_sha": "fc94b43e17b3008373683111b0dda6542b4b8b01",
+      "merged_at": "2026-10-21T06:50:58Z"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "project-1",
+    "title": "Název badatelského projektu",
+    "theme": "landscape",
+    "place": "Obec, okres, katastrální území",
+    "scope": "",
+    "research_questions": [],
+    "created": "2026-11-02"
+  },
+  "entities": [],
+  "sources": [],
+  "claims": [],
+  "events": [],
+  "links": [],
+  "research_log": [],
+  "open_questions": []
+}

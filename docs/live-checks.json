@@ -1,0 +1,192 @@
+{
+  "checked_date": "2026-11-02",
+  "scope": "Společné klienty obou skillů; malé živé dotazy, nikoli kontrola všech 62 katalogových zdrojů.",
+  "successful_cases": 8,
+  "other_observations": 2,
+  "checks": [
+    {
+      "case": "registry",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "registry"
+      ],
+      "checked_at": "2026-11-02T09:57:32.359256+00:00",
+      "exit_code": 0,
+      "request_url": "https://api.registr.digitalniknihovna.cz/libraries.json",
+      "response_url": "https://api.registr.digitalniknihovna.cz/libraries.json",
+      "retrieved_at": "2026-11-02T09:57:32+00:00",
+      "from_cache": false,
+      "count": 56
+    },
+    {
+      "case": "ruian-brod",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "ruian",
+        "--query",
+        "Uherský Brod",
+        "--kind",
+        "municipality"
+      ],
+      "checked_at": "2026-11-02T09:57:33.533228+00:00",
+      "exit_code": 0,
+      "request_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer/12/query?f=json&where=UPPER%28nazev%29+LIKE+%27%25UHERSK%C3%9D+BROD%25%27&outFields=%2A&outSR=4326&returnGeometry=false&returnCentroid=true&orderByFields=nazev+ASC%2Ckod+ASC&resultRecordCount=21",
+      "response_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer/12/query?f=json&where=UPPER%28nazev%29+LIKE+%27%25UHERSK%C3%9D+BROD%25%27&outFields=%2A&outSR=4326&returnGeometry=false&returnCentroid=true&orderByFields=nazev+ASC%2Ckod+ASC&resultRecordCount=21",
+      "retrieved_at": "2026-11-02T09:57:33+00:00",
+      "from_cache": false,
+      "returned_count": 1,
+      "truncated": false,
+      "candidates": [
+        {
+          "code": 592731,
+          "name": "Uherský Brod"
+        }
+      ]
+    },
+    {
+      "case": "ruian-ambiguity",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "ruian",
+        "--query",
+        "Horní Lhota",
+        "--kind",
+        "municipality"
+      ],
+      "checked_at": "2026-11-02T09:57:34.288418+00:00",
+      "exit_code": 0,
+      "request_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer/12/query?f=json&where=UPPER%28nazev%29+LIKE+%27%25HORN%C3%8D+LHOTA%25%27&outFields=%2A&outSR=4326&returnGeometry=false&returnCentroid=true&orderByFields=nazev+ASC%2Ckod+ASC&resultRecordCount=21",
+      "response_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer/12/query?f=json&where=UPPER%28nazev%29+LIKE+%27%25HORN%C3%8D+LHOTA%25%27&outFields=%2A&outSR=4326&returnGeometry=false&returnCentroid=true&orderByFields=nazev+ASC%2Ckod+ASC&resultRecordCount=21",
+      "retrieved_at": "2026-11-02T09:57:34+00:00",
+      "from_cache": false,
+      "returned_count": 2,
+      "truncated": false,
+      "automatic_selection": null,
+      "multiple_candidates": true
+    },
+    {
+      "case": "kramerius-mzk",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "kramerius-search",
+        "--library",
+        "mzk",
+        "--query",
+        "Uherský Brod",
+        "--rows",
+        "3",
+        "--public-only"
+      ],
+      "checked_at": "2026-11-02T09:57:35.809020+00:00",
+      "exit_code": 0,
+      "request_url": "https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=text_ocr%3A%22Uhersk%C3%BD+Brod%22&rows=3&start=0&wt=json&fl=pid%2Croot.pid%2Ctitles.search%2Croot.title%2Cdate.str%2Caccessibility%2Cmodel&fq=accessibility%3Apublic",
+      "response_url": "https://api.kramerius.mzk.cz/search/api/client/v7.0/search?q=text_ocr%3A%22Uhersk%C3%BD+Brod%22&rows=3&start=0&wt=json&fl=pid%2Croot.pid%2Ctitles.search%2Croot.title%2Cdate.str%2Caccessibility%2Cmodel&fq=accessibility%3Apublic",
+      "retrieved_at": "2026-11-02T09:57:35+00:00",
+      "from_cache": false,
+      "num_found": 4318,
+      "truncated": true
+    },
+    {
+      "case": "cenia-capabilities",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "wms",
+        "--url",
+        "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/wms"
+      ],
+      "checked_at": "2026-11-02T09:57:37.607611+00:00",
+      "exit_code": 0,
+      "request_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/wms?SERVICE=WMS&REQUEST=GetCapabilities",
+      "response_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/wms?SERVICE=WMS&REQUEST=GetCapabilities",
+      "retrieved_at": "2026-11-02T09:57:37+00:00",
+      "from_cache": false,
+      "layer_count": 1
+    },
+    {
+      "case": "ares-cz",
+      "command": [
+        "python3",
+        "skills/pamet-krajiny/scripts/zdroje.py",
+        "ares",
+        "--ico",
+        "46345965"
+      ],
+      "checked_at": "2026-11-02T09:57:38.241025+00:00",
+      "exit_code": 0,
+      "request_url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/46345965",
+      "response_url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/46345965",
+      "retrieved_at": "2026-11-02T09:57:38+00:00",
+      "from_cache": false,
+      "ico": "46345965",
+      "keys": [
+        "request_url",
+        "response_url",
+        "retrieved_at",
+        "from_cache",
+        "limitations",
+        "ico",
+        "name",
+        "legal_form",
+        "address",
+        "registry_dates",
+        "cz_nace",
+        "status",
+        "interpretation"
+      ]
+    },
+    {
+      "case": "iiif-manuscriptorium",
+      "exit_code": 0,
+      "request_url": "https://collectiones.manuscriptorium.com/assorted/NKCR__/NKCR__/2/NKCR__-NKCR__14_J_000094_3I6VGS2-cs/",
+      "response_url": "https://collectiones.manuscriptorium.com/assorted/NKCR__/NKCR__/2/NKCR__-NKCR__14_J_000094_3I6VGS2-cs/",
+      "retrieved_at": "2026-11-02T09:57:11+00:00",
+      "from_cache": false,
+      "presentation_version": 2,
+      "canvas_count": 932,
+      "truncated": true,
+      "reported_canvases": 2,
+      "images_downloaded": false
+    },
+    {
+      "case": "cenia-map-jpeg",
+      "exit_code": 0,
+      "request_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=orto&STYLES=&BBOX=-525389%2C-1187795%2C-523789%2C-1186595&WIDTH=800&HEIGHT=600&FORMAT=image%2Fjpeg&TRANSPARENT=FALSE&SRS=EPSG%3A5514",
+      "response_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=orto&STYLES=&BBOX=-525389%2C-1187795%2C-523789%2C-1186595&WIDTH=800&HEIGHT=600&FORMAT=image%2Fjpeg&TRANSPARENT=FALSE&SRS=EPSG%3A5514",
+      "retrieved_at": "2026-11-02T10:00:34+00:00",
+      "from_cache": false,
+      "version": "1.1.1",
+      "crs": "EPSG:5514",
+      "width": 800,
+      "height": 600,
+      "mime": "image/jpeg",
+      "sha256": "24e643c60da3f7ecd718e75726dde5e012661b8877f75f21380a73d834e324c6",
+      "bytes": 134847,
+      "asset_url": "https://github.com/dnesdan/pamet-krajiny/blob/main/examples/assets/uhersky-brod-ortofoto.jpg",
+      "local_photo_year_verified": false
+    },
+    {
+      "case": "kramerius-nfa-v5",
+      "checked_date": "2026-11-02",
+      "outcome": "blocked",
+      "http_status": 403,
+      "query": "Brno",
+      "rows": 2,
+      "public_only": true,
+      "observed_behavior": "Klient se zastavil. Nebyl proveden opakovaný požadavek ani obcházení přístupu.",
+      "scope": "Živý přístup této instance nebyl ověřen; normalizace API v5 má řízené testy."
+    },
+    {
+      "case": "cenia-map-format-mismatch",
+      "checked_date": "2026-11-02",
+      "outcome": "rejected_expected",
+      "requested_mime": "image/png",
+      "received_mime": "image/jpeg",
+      "observed_behavior": "Klient odmítl uložit nesprávný formát. Samostatný výslovný požadavek na JPEG uspěl."
+    }
+  ]
+}

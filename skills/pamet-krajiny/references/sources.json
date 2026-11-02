@@ -1,0 +1,1579 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-11-02",
+  "scope": "Česká republika; zahraniční zdroje jen pro české souvislosti",
+  "note": "Katalog zdrojů není seznam plně implementovaných konektorů. native označuje přibalený protokolový klient, upstream odkaz na samostatný původní nástroj, manual řízenou badatelskou práci. Časové a místní pokrytí ověřuj po fondu a položce.",
+  "sources": [
+    {
+      "id": "ruian",
+      "title": "ČÚZK — RÚIAN",
+      "url": "https://vdp.cuzk.gov.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "místo",
+        "adresa",
+        "obec",
+        "katastr"
+      ],
+      "access": "open",
+      "automation": "native:ruian",
+      "description": "Dnešní obce, části obcí, katastrální území a adresní místa; rozlišení kandidátů.",
+      "limitations": "Dnešní identifikátor nedokazuje historickou totožnost ani návaznost čísel domů.",
+      "docs_url": "https://ags.cuzk.cz/arcgis/rest/services/RUIAN/Prohlizeci_sluzba_nad_daty_RUIAN/MapServer",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cuzk-vfr",
+      "title": "ČÚZK — výměnný formát RÚIAN",
+      "url": "https://www.cuzk.gov.cz/vfr",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "místo",
+        "hranice",
+        "obec"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Celostátní otevřené soubory a aktualizace územní identifikace.",
+      "limitations": "Časové snímky registru nejsou mapou obcí před vznikem registru; čti metadata konkrétního vydání.",
+      "docs_url": "https://www.cuzk.gov.cz/vfr",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cuzk-archiv",
+      "title": "ČÚZK — Archiv",
+      "url": "https://ags.cuzk.gov.cz/archiv/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mapa",
+        "katastr",
+        "krajina",
+        "cesta",
+        "mlýn",
+        "dům"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Stabilní a pozemkový katastr, mapové listy a archivní letecké snímky.",
+      "limitations": "Datace zaměření, reambulace a vydání se liší. Sloučená mapa nemusí pokrývat každý list.",
+      "docs_url": "https://www.cuzk.gov.cz/Urady/Zememericky-urad/Dalsi-informace/UAZK/Prohlizeni-archivalii%2C-archivni-mapy.aspx",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cuzk-open",
+      "title": "ČÚZK — otevřená prostorová data",
+      "url": "https://ags.cuzk.cz/opendata/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "reliéf",
+        "cesta",
+        "terén",
+        "mapa",
+        "dmr"
+      ],
+      "access": "open",
+      "automation": "native:wms",
+      "description": "DMR 5G, mapové a výškopisné datové sady a jejich služby.",
+      "limitations": "Stopy v reliéfu samy nedokazují stáří ani účel objektu. Rozlišení není polohová přesnost.",
+      "docs_url": "https://ags.cuzk.cz/opendata/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cenia-ortho",
+      "title": "CENIA — historická ortofotomapa",
+      "url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/wms",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "krajina",
+        "mapa",
+        "ortofoto",
+        "pole",
+        "cesta",
+        "rybník"
+      ],
+      "access": "open",
+      "automation": "native:wms",
+      "description": "Historické letecké snímky, převážně z 50. let; WMS lze číst i stáhnout malý výřez.",
+      "limitations": "Místní snímek může být z jiného roku. Uváděj CENIA/GEODIS a CC BY 4.0; zkontroluj vrstvu roků.",
+      "docs_url": "https://cenia.gov.cz/2022/02/17/historicka-ortofotomapa-z-50-let-se-otevira/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cenia-years",
+      "title": "CENIA — roky historického snímkování",
+      "url": "https://gis.cenia.cz/geoserver/ortofotomapa_historicka_roky/wms",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mapa",
+        "ortofoto",
+        "datace"
+      ],
+      "access": "open",
+      "automation": "native:wms",
+      "description": "Vrstva skutečných roků leteckého snímkování.",
+      "limitations": "Rok snímku zjišťuj pro přesné místo; souhrnný název vrstvy není datace každého bodu.",
+      "docs_url": "https://geoportal.gov.cz/php/micka/record/basic/62208754-7a50-452b-8f4b-729ac0a80164",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "chartae",
+      "title": "VÚGTK — Chartae Antiquae",
+      "url": "https://www.vugtk.cz/virtualni-mapova-sbirka/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mapa",
+        "krajina",
+        "porovnání"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Vyhledávání starých map podle území, roku a měřítka, MapComparer.",
+      "limitations": "Podmínky zobrazení a zveřejnění digitální kopie kontroluj u konkrétního poskytovatele.",
+      "docs_url": "https://www.vugtk.cz/virtualni-mapova-sbirka/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "mzk-maps",
+      "title": "MZK — mapové sbírky a mapové série",
+      "url": "https://mapseries.mzk.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mapa",
+        "vojenské mapování",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Mapové série, listy a edice; propojení s digitalizovanými mapami.",
+      "limitations": "Rok dotisku nebo revize nemusí znamenat nové zaměření; různé edice nejsou zaměnitelné.",
+      "docs_url": "https://www.mzk.cz/katalogy-zdroje/mapy-v-mzk",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "nzm-forest",
+      "title": "NZM — staré lesní mapy a zahradní plány",
+      "url": "https://www.nzm.cz/aktualne-v-muzeu/muzeum-online/stare-lesni-mapy-a-zahradni-plany-online",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "les",
+        "zahrada",
+        "park",
+        "mapa"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Lesní hospodářské mapy, staré lesní mapy a zahradní plány.",
+      "limitations": "Pokrytí podle dochovaných sbírek; ne plošná souvislá časová řada pro celou republiku.",
+      "docs_url": "https://www.nzm.cz/aktualne-v-muzeu/muzeum-online/stare-lesni-mapy-a-zahradni-plany-online",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "historical-atlas",
+      "title": "Historický ústav AV ČR — historický atlas měst",
+      "url": "https://www.hiu.cas.cz/historicky-atlas-mest-cr",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "město",
+        "mapa",
+        "urbanismus"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Odborné mapové a historické podklady k vybraným městům.",
+      "limitations": "Celé svazky ani všechny reprodukce nemusejí být dostupné online.",
+      "docs_url": "https://www.hiu.cas.cz/historicky-atlas-mest-cr",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "cgs",
+      "title": "Česká geologická služba",
+      "url": "https://cgs.gov.cz/mapy-a-data/data",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "důl",
+        "lom",
+        "těžba",
+        "geologie",
+        "poddolování"
+      ],
+      "access": "open",
+      "automation": "native:wms",
+      "description": "Staré důlní práce, poddolování, geologie a mapové služby.",
+      "limitations": "Ověř dataci, úplnost a licenci konkrétní datové sady; nenahrazuje technický průzkum.",
+      "docs_url": "https://cgs.gov.cz/mapy-a-data/data",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "heis",
+      "title": "VÚV TGM — historické rybníky",
+      "url": "https://heis.vuv.cz/data/webmap/datovesady/projekty/HistorickeRybniky/default.asp",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "rybník",
+        "voda",
+        "mlýn",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Specializované historické vodní plochy a podklady vodního hospodářství.",
+      "limitations": "Výsledky konkrétního projektu, nikoli úplný soupis všech rybníků všech období.",
+      "docs_url": "https://heis.vuv.cz/data/webmap/datovesady/projekty/HistorickeRybniky/default.asp",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "chmi",
+      "title": "ČHMÚ — data a vyhodnocení",
+      "url": "https://www.chmi.cz/o-chmu/produkty-a-sluzby/data-a-vyhodnoceni",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "povodeň",
+        "počasí",
+        "sucho",
+        "klima"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Historická měření a další otevřené hydrometeorologické podklady.",
+      "limitations": "Stanice, období, změny měření a metadata musí odpovídat místu; počasí samo nedokazuje příčinu změny krajiny.",
+      "docs_url": "https://www.chmi.cz/o-chmu/produkty-a-sluzby/data-a-vyhodnoceni",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "npu-open",
+      "title": "NPÚ — otevřená data ISAD",
+      "url": "https://isad.npu.cz/openData",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "památka",
+        "dům",
+        "továrna",
+        "krajina",
+        "řemeslo"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Exporty CSV/JSON památkových údajů.",
+      "limitations": "Soupis chráněných a evidovaných památek není úplným soupisem všech historických staveb.",
+      "docs_url": "https://isad.npu.cz/openData",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "pamatkovy-katalog",
+      "title": "NPÚ — Památkový katalog",
+      "url": "https://pamatkovykatalog.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "památka",
+        "dům",
+        "průmysl",
+        "město"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Odborné popisy, rejstříková čísla, památková ochrana, odkazy na dokumentaci.",
+      "limitations": "Právní ochrana, datace stavby a její dnešní stav jsou různé skutečnosti.",
+      "docs_url": "https://pamatkovykatalog.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "amcr",
+      "title": "Archeologická mapa ČR",
+      "url": "https://amcr-info.aiscr.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "archeologie",
+        "zaniklé místo",
+        "krajina",
+        "sídlo"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Archeologické události, objekty a dokumenty; rozhraní a digitální archiv.",
+      "limitations": "Přístup a přesnost polohy jsou různé; nezveřejňuj citlivé lokality. Výchozí licence vybraných obsahů CC BY-NC 4.0 není všeobecná komerční licence.",
+      "docs_url": "https://amcr-info.aiscr.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "csu-lexicon",
+      "title": "ČSÚ — Historický lexikon obcí",
+      "url": "https://csu.gov.cz/produkty/historicky-lexikon-obci-1869-az-2015",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "obec",
+        "obyvatelstvo",
+        "domy",
+        "statistika"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Historické počty obyvatel a domů pro sčítání 1869–2011 a územní návaznosti.",
+      "limitations": "Vydání a územní harmonizaci ověř v konkrétní sadě; dnešní hranice nelze automaticky srovnat s historickými.",
+      "docs_url": "https://csu.gov.cz/produkty/historicky-lexikon-obci-1869-az-2015",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ujc",
+      "title": "Ústav pro jazyk český — elektronické zdroje",
+      "url": "https://ujc.cas.cz/cs/elektronicke-slovniky-a-zdroje/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "název",
+        "pomístní jméno",
+        "řemeslo",
+        "slovník"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Historická a pomístní jména, starší slovní zásoba a nářečí.",
+      "limitations": "Etymologie není dokladem konkrétního objektu; původní podobu cituj a překlad ukládej odděleně.",
+      "docs_url": "https://ujc.cas.cz/cs/elektronicke-slovniky-a-zdroje/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "spjms",
+      "title": "ÚJČ — pomístní jména Moravy a Slezska",
+      "url": "https://spjms.ujc.cas.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Vysočina",
+        "Jihomoravský",
+        "Olomoucký",
+        "Zlínský",
+        "Moravskoslezský"
+      ],
+      "topics": [
+        "pomístní jméno",
+        "název",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Specializovaný slovník pomístních jmen.",
+      "limitations": "Pokrytí Moravy a Slezska; pro Čechy zvol jiné slovníky ÚJČ.",
+      "docs_url": "https://spjms.ujc.cas.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "kramerius-registry",
+      "title": "Registr digitálních knihoven Kramerius",
+      "url": "https://api.registr.digitalniknihovna.cz/libraries.json",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "noviny",
+        "kniha",
+        "inzerát",
+        "adresář",
+        "časopis",
+        "řemeslo"
+      ],
+      "access": "open",
+      "automation": "native:registry",
+      "description": "Živý seznam instancí, jejich API, verze a klientů.",
+      "limitations": "Počet instancí není počet unikátních korpusů; knihovny se překrývají a server může být nedostupný.",
+      "docs_url": "https://api.registr.digitalniknihovna.cz/libraries.json",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "kramerius",
+      "title": "Česká digitální knihovna / Kramerius",
+      "url": "https://www.digitalniknihovna.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "noviny",
+        "kniha",
+        "inzerát",
+        "adresář",
+        "firma",
+        "řemeslo"
+      ],
+      "access": "open",
+      "automation": "native:kramerius",
+      "description": "Vyhledávání v metadatech a OCR periodik, knih, adresářů a dalších dokumentů přes zvolenou instanci v5/v7.",
+      "limitations": "OCR a index nejsou úplný pramen; veřejná metadata neznamenají právo stáhnout nebo zveřejnit sken.",
+      "docs_url": "https://github.com/ceskaexpedice/kramerius",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "dnnt",
+      "title": "NK ČR — díla nedostupná na trhu",
+      "url": "https://www.nkp.cz/katalogy-databaze-digitalni-knihovny/dila-nedostupna-na-trhu-dnnt",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "noviny",
+        "kniha",
+        "adresář"
+      ],
+      "access": "restricted",
+      "automation": "manual",
+      "description": "Čtení některých chráněných dokumentů v povoleném režimu.",
+      "limitations": "Použij oprávněný účet a podmínky služby. Klient skillu nestahuje DNNT skeny ani nepřekonává přihlášení.",
+      "docs_url": "https://www.nkp.cz/katalogy-databaze-digitalni-knihovny/dila-nedostupna-na-trhu-dnnt",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "nkp-open",
+      "title": "NK ČR — otevřená bibliografická data",
+      "url": "https://www.nkp.cz/o-knihovne/odborne-cinnosti/otevrena-data",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "bibliografie",
+        "autorita",
+        "kniha",
+        "osoba"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Katalogová a autoritní data, soubory a OAI-PMH.",
+      "limitations": "CC0 katalogových záznamů neznamená volnou licenci celé knihy.",
+      "docs_url": "https://www.nkp.cz/o-knihovne/odborne-cinnosti/otevrena-data",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "biblio",
+      "title": "Historický ústav AV ČR — Bibliografie dějin českých zemí",
+      "url": "https://biblio.hiu.cas.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "bibliografie",
+        "dějiny",
+        "podnik",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Odborná literatura, regionální studie, články a tematické bibliografie.",
+      "limitations": "Bibliografický záznam není plný text ani potvrzení závěrů autora.",
+      "docs_url": "https://biblio.hiu.cas.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "anno",
+      "title": "ÖNB — ANNO",
+      "url": "https://anno.onb.ac.at/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "noviny",
+        "němčina",
+        "inzerát",
+        "řemeslo",
+        "adresář"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Rakouský historický tisk s četnými českými a moravskými souvislostmi.",
+      "limitations": "Rozsah exportního datasetu se liší od webu ANNO; OCR potřebuje kontrolu obrazu.",
+      "docs_url": "https://labs.onb.ac.at/de/dataset/anno/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "manuscriptorium",
+      "title": "Manuscriptorium — IIIF",
+      "url": "https://www.manuscriptorium.com/iiif-kolekce-manuscriptoria/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "rukopis",
+        "mapa",
+        "kniha",
+        "iiif"
+      ],
+      "access": "open",
+      "automation": "native:iiif",
+      "description": "Vybrané rukopisné a historické dokumenty s IIIF manifesty.",
+      "limitations": "Generický klient načte poskytnutý manifest, nenahrazuje katalogový průzkum; licence je po objektech.",
+      "docs_url": "https://www.manuscriptorium.com/iiif-kolekce-manuscriptoria/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "esbirky",
+      "title": "eSbírky",
+      "url": "https://www.esbirky.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "předmět",
+        "výrobek",
+        "fotografie",
+        "řemeslo",
+        "muzeum"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Muzejní předměty a sbírkové záznamy, část z nich fotografie a průmyslové výrobky.",
+      "limitations": "Každý obraz má vlastní práva; veřejný katalog není záruka veřejného API.",
+      "docs_url": "https://www.esbirky.cz/landing-pages/jak-publikovat-sbirky",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ndb",
+      "title": "Národní archiv — Národní digitální badatelna",
+      "url": "https://na.gov.cz/verejnost/ndb",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "archiv",
+        "podnik",
+        "spolek",
+        "cech",
+        "fond"
+      ],
+      "access": "metadata",
+      "automation": "manual",
+      "description": "Vyhledávání archiválií a dostupných digitálních reprodukcí.",
+      "limitations": "Část kroků vyžaduje identitu/objednávku; analogový fond není automaticky digitalizován.",
+      "docs_url": "https://na.gov.cz/verejnost/ndb",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "archives-portal",
+      "title": "Archivní portál ČR",
+      "url": "https://portal.nacr.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "archiv",
+        "fond",
+        "podnik",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Výchozí hledání archivních fondů a pomůcek napříč institucemi.",
+      "limitations": "Dochovanost, příslušnost a digitální přístup ověř u konkrétního archivu; žádný crawler archivu zde není.",
+      "docs_url": "https://portal.nacr.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "soa-praha",
+      "title": "SOA Praha — eBadatelna",
+      "url": "https://ebadatelna.soapraha.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Středočeský"
+      ],
+      "topics": [
+        "archiv",
+        "kronika",
+        "cech",
+        "živnost",
+        "mapa",
+        "grunt"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Matriky, kroniky, pozemkové a další archivní dokumenty středních Čech.",
+      "limitations": "Fondy města Prahy směruj také do AHMP. Všechny fondy nejsou digitalizovány.",
+      "docs_url": "https://www.soapraha.gov.cz/castokladenedotazy/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ahmp",
+      "title": "Archiv hlavního města Prahy",
+      "url": "https://katalog.ahmp.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Praha"
+      ],
+      "topics": [
+        "archiv",
+        "živnost",
+        "cech",
+        "sčítání",
+        "adresář"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Pražské městské fondy a digitální katalog.",
+      "limitations": "Historická obec a období mohou vyžadovat také jiný archiv; konkrétní signaturu ověř.",
+      "docs_url": "https://katalog.ahmp.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "soa-trebon",
+      "title": "SOA Třeboň — Digiarchiv",
+      "url": "https://digi.ceskearchivy.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Jihočeský",
+        "Vysočina"
+      ],
+      "topics": [
+        "archiv",
+        "kronika",
+        "grunt",
+        "mapa",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Jihočeské archivní fondy; také vybrané matriky mimo dnešní kraj.",
+      "limitations": "Dnešní kraj není definitivní určení držitele fondu; některé soubory nejsou online.",
+      "docs_url": "https://digi.ceskearchivy.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "porta",
+      "title": "SOA Plzeň — Porta fontium",
+      "url": "https://www.portafontium.eu/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Plzeňský",
+        "Karlovarský"
+      ],
+      "topics": [
+        "archiv",
+        "kronika",
+        "podnik",
+        "matrika",
+        "mapa"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Západočeské a přeshraniční archivní zdroje.",
+      "limitations": "Vyhledávač může indexovat popis, nikoli každý snímek nebo jméno.",
+      "docs_url": "https://www.portafontium.eu/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "soa-litomerice",
+      "title": "SOA Litoměřice — digitální archiv",
+      "url": "https://www.soalitomerice.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Ústecký",
+        "Liberecký"
+      ],
+      "topics": [
+        "archiv",
+        "kronika",
+        "podnik",
+        "grunt",
+        "matrika"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Severočeské fondy a digitální badatelna.",
+      "limitations": "Řiď se aktuálním odkazem archivu; rodokmenový Zoomify helper není plný vyhledávač.",
+      "docs_url": "https://www.soalitomerice.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "aron",
+      "title": "SOA Hradec Králové — ARON",
+      "url": "https://aron.vychodoceskearchivy.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Královéhradecký",
+        "Pardubický",
+        "Vysočina"
+      ],
+      "topics": [
+        "archiv",
+        "kronika",
+        "podnik",
+        "grunt",
+        "matrika"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Východočeské archiválie, fondy a dostupné snímky.",
+      "limitations": "Permalink katalogové jednotky nemusí otevřít konkrétní snímek; eviduj oba identifikátory.",
+      "docs_url": "https://aron.vychodoceskearchivy.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "mza",
+      "title": "Moravský zemský archiv",
+      "url": "https://www.mza.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Jihomoravský",
+        "Zlínský",
+        "Vysočina"
+      ],
+      "topics": [
+        "archiv",
+        "cech",
+        "živnost",
+        "podnik",
+        "grunt",
+        "mapa"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Jižní Morava, Zlínsko a Vysočina včetně okresních archivů; více oddělených digitálních aplikací.",
+      "limitations": "Neúplný výsledek vyhledání podle obce není důkaz nepřítomnosti knihy; matriky jiného držitele jsou možné.",
+      "docs_url": "https://www.mza.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "za-opava",
+      "title": "Zemský archiv v Opavě",
+      "url": "https://www.archives.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Olomoucký",
+        "Moravskoslezský"
+      ],
+      "topics": [
+        "archiv",
+        "cech",
+        "podnik",
+        "kronika",
+        "grunt"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Moravskoslezské a olomoucké fondy, digitální badatelna.",
+      "limitations": "Při historické zemské nebo okresní příslušnosti ověř přesného původce a fond.",
+      "docs_url": "https://www.archives.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "brno-archive",
+      "title": "Archiv města Brna",
+      "url": "https://archiv.brno.cz/w/digitalni-badatelna-uvodni-text",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Jihomoravský"
+      ],
+      "topics": [
+        "archiv",
+        "adresář",
+        "sčítání",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Brněnské adresáře, sčítání a další městské fondy.",
+      "limitations": "Lokální doplněk k národním zdrojům; některé ročníky jsou jen v badatelně.",
+      "docs_url": "https://archiv.brno.cz/w/digitalni-badatelna-uvodni-text",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "brno-maps",
+      "title": "Brno — historické mapy a ortofota",
+      "url": "https://gis.brno.cz/ost/edas/public/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Jihomoravský"
+      ],
+      "topics": [
+        "mapa",
+        "ortofoto",
+        "město",
+        "průmysl"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Městské historické mapové podklady.",
+      "limitations": "Regionální zdroj; dostupnost vrstvy neprokazuje přesnou dataci každého objektu.",
+      "docs_url": "https://gis.brno.cz/ost/edas/public/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "brno-encyclopedia",
+      "title": "Encyklopedie dějin města Brna",
+      "url": "https://encyklopedie.brna.cz/home-mmb/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Jihomoravský"
+      ],
+      "topics": [
+        "osoba",
+        "podnik",
+        "událost",
+        "místo"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Lokální odborné hesláře s odkazy na další prameny.",
+      "limitations": "Druhotný zdroj; dohledávej uvedené archiválie a udržuj tvrzení odděleně.",
+      "docs_url": "https://encyklopedie.brna.cz/home-mmb/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ipr",
+      "title": "IPR Praha — mapové aplikace",
+      "url": "https://app.iprpraha.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Praha"
+      ],
+      "topics": [
+        "mapa",
+        "ortofoto",
+        "město",
+        "průmysl"
+      ],
+      "access": "open",
+      "automation": "upstream",
+      "description": "Historické pražské mapy a ortofota.",
+      "limitations": "Pražský doplněk, žádné celostátní pokrytí.",
+      "docs_url": "https://app.iprpraha.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ares",
+      "title": "MF ČR — ARES",
+      "url": "https://ares.gov.cz/",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "firma",
+        "ičo",
+        "právní subjekt",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "native:ares",
+      "description": "Současná veřejná identita ekonomického subjektu podle IČO.",
+      "limitations": "Záznam není historií značky nebo továrny. Převzetí značky nedokazuje právní nástupnictví.",
+      "docs_url": "https://data.mf.gov.cz/api/ares.html",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "justice",
+      "title": "Ministerstvo spravedlnosti — veřejný rejstřík a sbírka listin",
+      "url": "https://or.justice.cz/ias/ui/rejstrik",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "firma",
+        "právní subjekt",
+        "nástupnictví",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Zápisy, historie změn a dostupné uložené listiny.",
+      "limitations": "Ověř identitu a datum konkrétní listiny; dnešní rejstřík nepokrývá každou historickou živnost.",
+      "docs_url": "https://or.justice.cz/ias/ui/rejstrik",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "rzp",
+      "title": "Živnostenský rejstřík",
+      "url": "https://www.rzp.cz/",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "živnost",
+        "řemeslo",
+        "provozovna"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Veřejná současná živnostenská oprávnění a údaje o provozovnách.",
+      "limitations": "Neúplná historie starších řemeslníků; data žijících fyzických osob automaticky nezveřejňuj.",
+      "docs_url": "https://www.rzp.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "upv",
+      "title": "Úřad průmyslového vlastnictví — ePortál",
+      "url": "https://www.upv.gov.cz/o-eportalu",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "patent",
+        "ochranná známka",
+        "výrobek",
+        "firma"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Patentové a známkové databáze včetně vybraných historických rejstříků.",
+      "limitations": "Přihlašovatel, vlastník známky, výrobce a právní nástupce jsou odlišné role.",
+      "docs_url": "https://www.upv.gov.cz/o-eportalu",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "upv-historical",
+      "title": "ÚPV — historické rešeršní zdroje",
+      "url": "https://www.upv.gov.cz/sluzby/informacni-sluzby/resersni-sluzby",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "ochranná známka",
+        "patent",
+        "výrobek",
+        "věstník"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Rešeršní služby a historické známkové věstníky.",
+      "limitations": "Digitalizované řady a jazykové varianty ověř podle konkrétního období.",
+      "docs_url": "https://www.upv.gov.cz/sluzby/informacni-sluzby/resersni-sluzby",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ntm-archive",
+      "title": "Archiv Národního technického muzea",
+      "url": "https://www.ntm.cz/pro-odbornou-verejnost/archiv-narodniho-technickeho-muzea",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "podnik",
+        "technika",
+        "výrobek",
+        "vynález",
+        "průmysl"
+      ],
+      "access": "metadata",
+      "automation": "manual",
+      "description": "Podnikové, osobní a technické fondy a archivní pomůcky.",
+      "limitations": "Online pomůcka neznamená plné digitální zpřístupnění archiválie.",
+      "docs_url": "https://www.ntm.cz/pro-odbornou-verejnost/archiv-narodniho-technickeho-muzea",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "industrial-topography",
+      "title": "ČVUT — průmyslová topografie",
+      "url": "https://www.fa.cvut.cz/cs/vyzkum-a-spoluprace/publikace/4723-industrialni-topografie-industrialni-topografie-ceske-republiky",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "továrna",
+        "průmysl",
+        "areál",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Odborné průmyslové stavby a lokality; regionální soupisy.",
+      "limitations": "Budova a podnik nejsou totožná entita; dataci a provozovatele cituj jednotlivě.",
+      "docs_url": "https://www.fa.cvut.cz/cs/vyzkum-a-spoluprace/publikace/4723-industrialni-topografie-industrialni-topografie-ceske-republiky",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "vodni-mlyny",
+      "title": "Vodní mlýny",
+      "url": "https://www.vodnimlyny.cz/mlyny/objekty/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mlýn",
+        "mlynář",
+        "řemeslo",
+        "voda"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Specializovaná databáze vodních mlýnů s různě podrobnými doklady.",
+      "limitations": "Přispěvatelský zdroj, ne úřední registr. Ověř odkazy na mapy a archiválie; nepředpokládej veřejné API.",
+      "docs_url": "https://www.vodnimlyny.cz/mlyny/objekty/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "zanikle-obce",
+      "title": "Zaniklé obce a objekty",
+      "url": "https://www.zanikleobce.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "zaniklé místo",
+        "vysídlení",
+        "krajina"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Přispěvatelské fotografie, názvy a stopy k zaniklým lokalitám.",
+      "limitations": "Vodítko pro další ověření; licence fotografie a správnost popisu jsou po položkách.",
+      "docs_url": "https://www.zanikleobce.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "diamo",
+      "title": "DIAMO — historie lomů a rekultivací",
+      "url": "https://www.diamo.cz/cs/milada-most",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "Ústecký"
+      ],
+      "topics": [
+        "důl",
+        "lom",
+        "rekultivace",
+        "jezero"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Institucionální historie konkrétních rekultivovaných důlních lokalit.",
+      "limitations": "Firemní/institucionální retrospektiva; různé stránky mohou uvádět rozdílné údaje.",
+      "docs_url": "https://www.diamo.cz/cs/milada-most",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "dotace-eu",
+      "title": "DotaceEU — podpořené projekty",
+      "url": "https://www.dotaceeu.cz/cs/statistiky-a-analyzy/mapa-projektu",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "park",
+        "revitalizace",
+        "krajina",
+        "areál"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Záznamy novějších veřejných projektů, popis, termíny a rozsah.",
+      "limitations": "Financovaný projekt není sám důkaz o všech historických stavech lokality.",
+      "docs_url": "https://www.dotaceeu.cz/cs/statistiky-a-analyzy/mapa-projektu",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "vua",
+      "title": "Vojenský ústřední archiv — databáze",
+      "url": "https://www.vuapraha.cz/databaze-vha/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "válka",
+        "zaměstnanec",
+        "osoba",
+        "voják"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Vojenské osudy osob jako doplňkový kontext výroby a místa.",
+      "limitations": "Shoda jména není identita; citlivé údaje a vztah k podniku vyžadují samostatné doložení.",
+      "docs_url": "https://www.vuapraha.cz/databaze-vha/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "abs",
+      "title": "Archiv bezpečnostních složek — eBadatelna",
+      "url": "https://www.abscr.cz/ebadatelna/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "znárodnění",
+        "osoba",
+        "podnik",
+        "válka"
+      ],
+      "access": "restricted",
+      "automation": "manual",
+      "description": "Archivní fondy a digitalizované dokumenty přístupné podle pravidel instituce.",
+      "limitations": "Katalog, OCR a snímky mají různý režim. Archivní obvinění není prokázaný fakt.",
+      "docs_url": "https://www.abscr.cz/ebadatelna/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "pamet-naroda",
+      "title": "Paměť národa",
+      "url": "https://www.pametnaroda.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "rozhovor",
+        "zaměstnanec",
+        "pamětník",
+        "vysídlení"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Orální historie, zkušenosti obyvatel a zaměstnanců.",
+      "limitations": "Vzpomínku odlišuj od nezávisle doložené události; dostupnost výňatku a plného záznamu se liší.",
+      "docs_url": "https://www.pametnaroda.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "holocaust",
+      "title": "Institut Terezínské iniciativy — Holocaust.cz",
+      "url": "https://www.holocaust.cz/databaze-obeti/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "aryzace",
+        "osoba",
+        "podnik",
+        "válka"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Doplňující historický kontext obětí a souvisejících dokumentů.",
+      "limitations": "Databáze osoby sama nedokazuje arizaci konkrétního podniku; pravidla reprodukce po dokumentech.",
+      "docs_url": "https://www.holocaust.cz/databaze-obeti/help/jak-citovat-a-reprodukovat-dokumenty-z-databaze-2/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "arolsen",
+      "title": "Arolsen Archives",
+      "url": "https://collections.arolsen-archives.org/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "nucená práce",
+        "válka",
+        "zaměstnanec"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Mezinárodní doklady perzekuce a nuceného nasazení s českými souvislostmi.",
+      "limitations": "Soukromí, jmenné varianty a přesné přiřazení podniku kontroluj ručně.",
+      "docs_url": "https://collections.arolsen-archives.org/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "webarchiv",
+      "title": "NK ČR — Webarchiv",
+      "url": "https://www.webarchiv.cz/cs",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "web",
+        "podnik",
+        "spolek",
+        "instituce"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Archiv českého webu pro novější historii firem, obcí a institucí.",
+      "limitations": "Veřejná je jen část obsahu; úplnější přístup může být v knihovně. Datum sklizně není datum založení.",
+      "docs_url": "https://app.webarchiv.cz/cs/faq",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "data-gov",
+      "title": "Národní katalog otevřených dat",
+      "url": "https://data.gov.cz/",
+      "themes": [
+        "landscape",
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "data",
+        "mapa",
+        "statistika",
+        "obec",
+        "podnik"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Vyhledání dalších krajských, obecních a oborových sad.",
+      "limitations": "Katalogový záznam ověř proti aktuálním datům, poskytovateli, licenci a dokumentaci.",
+      "docs_url": "https://data.gov.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "ces-demus",
+      "title": "Ministerstvo kultury — centrální evidence sbírek",
+      "url": "https://www.cesonline.cz/",
+      "themes": [
+        "enterprise"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "sbírka",
+        "muzeum",
+        "výrobek",
+        "řemeslo"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Vyhledání instituce a sbírky, která může uchovávat doklady řemesla.",
+      "limitations": "Eviduje sbírky, nikoli nutně jednotlivé předměty nebo jejich digitalizáty.",
+      "docs_url": "https://www.cesonline.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "aopk-isop",
+      "title": "AOPK ČR — ISOP a registr ochrany přírody",
+      "url": "https://portal.nature.cz/",
+      "themes": [
+        "landscape"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "mokřad",
+        "krajina",
+        "příroda",
+        "ochrana",
+        "rybník"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Úřední záznamy chráněných území, předmět ochrany a odkazy na dokumentaci.",
+      "limitations": "Datum vyhlášení ochrany nedatuje vznik biotopu. Citlivé polohy druhů nejsou běžnou veřejnou mapovou vrstvou.",
+      "docs_url": "https://portal.nature.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    },
+    {
+      "id": "dibavod",
+      "title": "VÚV TGM — DIBAVOD a povodňové zprávy",
+      "url": "https://www.dibavod.cz/",
+      "themes": [
+        "landscape"
+      ],
+      "regions": [
+        "CZ"
+      ],
+      "topics": [
+        "povodeň",
+        "voda",
+        "rybník",
+        "řeka",
+        "náhon"
+      ],
+      "access": "open",
+      "automation": "manual",
+      "description": "Vodohospodářské podklady a digitální kopie institucionálních povodňových zpráv.",
+      "limitations": "U převzaté zprávy cituj skutečného původce, období a konkrétní oddíl; výpis z indexu není přečtená zpráva.",
+      "docs_url": "https://www.dibavod.cz/",
+      "verification": "documentation-reviewed",
+      "checked_at": "2026-11-02"
+    }
+  ]
+}

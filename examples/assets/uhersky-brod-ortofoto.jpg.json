@@ -1,0 +1,35 @@
+{
+  "request_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=orto&STYLES=&BBOX=-525389%2C-1187795%2C-523789%2C-1186595&WIDTH=800&HEIGHT=600&FORMAT=image%2Fjpeg&TRANSPARENT=FALSE&SRS=EPSG%3A5514",
+  "response_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=orto&STYLES=&BBOX=-525389%2C-1187795%2C-523789%2C-1186595&WIDTH=800&HEIGHT=600&FORMAT=image%2Fjpeg&TRANSPARENT=FALSE&SRS=EPSG%3A5514",
+  "retrieved_at": "2026-11-02T10:00:34+00:00",
+  "from_cache": false,
+  "limitations": [
+    "Jde o vyžádaný mapový výřez, nikoli automaticky datovaný důkaz změny krajiny.",
+    "Ověř licenci vrstvy, datum měření/snímku a vhodnost měřítka; neuvedené datum nedoplňuj odhadem.",
+    "Příkaz neprovádí reprojekci. EPSG:5514 používá nativní metry a jen WMS 1.1.1."
+  ],
+  "capabilities": {
+    "request_url": "https://gis.cenia.cz/mapcache/ortofotomapa_historicka/wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1",
+    "retrieved_at": "2026-11-02T09:59:46+00:00",
+    "from_cache": true
+  },
+  "layer": "orto",
+  "layer_title": "Historická ortofotomapa (50.léta)",
+  "version": "1.1.1",
+  "crs": "EPSG:5514",
+  "bbox_input": [
+    -525389.0,
+    -1187795.0,
+    -523789.0,
+    -1186595.0
+  ],
+  "bbox_input_order": "easting,northing",
+  "bbox_request": "-525389,-1187795,-523789,-1186595",
+  "width": 800,
+  "height": 600,
+  "mime": "image/jpeg",
+  "sha256": "24e643c60da3f7ecd718e75726dde5e012661b8877f75f21380a73d834e324c6",
+  "bytes": 134847,
+  "file": "pamet-krajiny/examples/assets/uhersky-brod-ortofoto.jpg",
+  "sidecar": "pamet-krajiny/examples/assets/uhersky-brod-ortofoto.jpg.json"
+}
