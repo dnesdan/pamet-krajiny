@@ -186,7 +186,7 @@ class WmsTests(unittest.TestCase):
             out=Path(td)/"map.png"
             metadata=z.wms_map(client,"https://example.org/wms","test-layer","16,49,17,50",out,width=32,height=16)
             self.assertEqual(out.read_bytes(),body)
-            sidecar=json.loads(Path(str(out)+".json").read_text())
+            sidecar=json.loads(Path(str(out)+".json").read_text(encoding="utf-8"))
             self.assertEqual(metadata["sha256"],sidecar["sha256"])
             self.assertEqual(sidecar["bbox_request"],"49,16,50,17")
             self.assertEqual(sidecar["crs"],"EPSG:4326")

@@ -297,14 +297,14 @@ class RoutingAndCliTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             path=Path(td)/"dossier.json"; out=Path(td)/"report.html"
             command=[sys.executable,str(SCRIPT)]
-            result=subprocess.run(command+["init","--title","Test","--theme","enterprise","--place","Plzeň","--out",str(path)],capture_output=True,text=True)
+            result=subprocess.run(command+["init","--title","Test","--theme","enterprise","--place","Plzeň","--out",str(path)],capture_output=True,text=True,encoding="utf-8")
             self.assertEqual(result.returncode,0,result.stderr)
             for arguments in (["validate",str(path)], ["render",str(path),"--format","html","--out",str(out)]):
-                result=subprocess.run(command+arguments,capture_output=True,text=True)
+                result=subprocess.run(command+arguments,capture_output=True,text=True,encoding="utf-8")
                 self.assertEqual(result.returncode,0,result.stderr)
-            self.assertIn('<html lang="cs">',out.read_text())
+            self.assertIn('<html lang="cs">',out.read_text(encoding="utf-8"))
             original=path.read_bytes()
-            result=subprocess.run(command+["render",str(path),"--format","html","--out",str(path)],capture_output=True,text=True)
+            result=subprocess.run(command+["render",str(path),"--format","html","--out",str(path)],capture_output=True,text=True,encoding="utf-8")
             self.assertEqual(result.returncode,2)
             self.assertEqual(path.read_bytes(),original)
 

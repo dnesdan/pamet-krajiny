@@ -27,6 +27,8 @@ python tools/verify.py
 | Zdroje | RÚIAN a nejednoznačné názvy; Kramerius v5/v7; IIIF v2/v3; ARES; dědičnost WMS parametrů, osy, formát a rozměry obrázku |
 | Přenos mezi systémy | Čeština na stdout/stderr i při vynuceném ASCII prostředí; sdílené zámky pro POSIX a Windows |
 
+První skutečný běh na Windows odhalil chybu samotného testu načítání HTML: výchozí CP1252 neumělo přečíst správně vytvořený UTF-8 soubor. Test nyní výslovně používá UTF-8; nebyl vypnut ani obejit změnou prostředí. Linux a macOS prošly již v prvním běhu. Aktuální výsledek celé matice je ověřitelný přes výše uvedené Actions.
+
 ## Nezávislé použití a opravy z kontroly
 
 Rožmberk: nový agent dostal téma, skill a dostupné zdroje bez předem připravené odpovědi. Založil projekt, vytvořil čtyři tvrzení, validoval data a vyexportoval Markdown i HTML. Výsledkem je [rozmberk.json](examples/rozmberk.json), se zdroji AOPK a původní povodňovou zprávou. Nedostupné služby nebyly vydávány za prázdný archiv.

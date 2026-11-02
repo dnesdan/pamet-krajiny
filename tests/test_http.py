@@ -62,8 +62,8 @@ class HttpTests(unittest.TestCase):
     def test_corrupt_body_is_not_reused(self):
         client=self.client(); client.fetch("https://example.org/data")
         path=next((Path(self.temp.name)/"responses").glob("*.json"))
-        cache=json.loads(path.read_text()); cache["sha256"]="wrong"
-        path.write_text(json.dumps(cache))
+        cache=json.loads(path.read_text(encoding="utf-8")); cache["sha256"]="wrong"
+        path.write_text(json.dumps(cache), encoding="utf-8")
         self.assertFalse(client.fetch("https://example.org/data").from_cache)
         self.assertEqual(len(self.calls),2)
 
